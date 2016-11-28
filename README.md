@@ -13,7 +13,7 @@ A progress for game. To find out which charactor should appear on the stage.
 
 > v1.0  2016/11/24  用最基本的思路写出了，什么加成都没有的出手顺序。一次性计算完成。
 
-> v1.0  2016/11/28  根据基本计算思路，实现控制继续出场和结束。
+> v2.0  2016/11/28  根据基本计算思路，实现控制继续出场和结束。并将代码转入AndroidStudio，为后面图形界面做准备。
 
 #  更新计划
 
