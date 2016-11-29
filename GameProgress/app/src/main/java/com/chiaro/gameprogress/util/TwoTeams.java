@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * V1.2
  * 分两个队，每队人数不固定  速度有差异
  * Created by chiaro on 2016/11/28.
  */
@@ -42,10 +43,10 @@ public class TwoTeams {
         // 为了防止错位，这个新数组前面是aTeam，后面是bTeam
         int[] allTeam = new int[aTeam.length + bTeam.length];
         for (int i = 0; i < allTeam.length; i++) {
-            if(i<=aTeam.length){
-                allTeam[i]=aTeam[i];
-            }else {
-                allTeam[i]=bTeam[i-aTeam.length];
+            if (i < aTeam.length) {
+                allTeam[i] = aTeam[i];
+            } else {
+                allTeam[i] = bTeam[i - aTeam.length];
             }
         }
 
@@ -91,7 +92,11 @@ public class TwoTeams {
                     // count计数加一个
                     count[k] = count[k] + 1;
 
-                    System.out.println("第" + turn.size() + "出手的人是：" + k);
+                    if (k < aTeam.length) {
+                        System.out.println("第" + turn.size() + "出手的人是：aTeam的" + k);
+                    } else {
+                        System.out.println("第" + turn.size() + "出手的人是：bTeam的" + (k - aTeam.length));
+                    }
 
                     System.out.print("请输入（输入\"y\"并回车继续，输入其他内容结束）：");
                     String command = scanner.nextLine();// 获取用户输入的一行文本
@@ -99,17 +104,14 @@ public class TwoTeams {
                         // 不用做什么
                     } else {
                         // 如果结束了，则打出到现在为止所有的顺序然后return
-                        System.out.print("各个角色出场顺序为：");
-                        for (int m = 0; m < turn.size(); m++) {
-                            System.out.print(turn.get(m));
-                        }
-                        System.out.println();
-                        System.out.println("其中，0号角色出场" + count[0] + "次");
-                        System.out.println("其中，1号角色出场" + count[1] + "次");
-                        System.out.println("其中，2号角色出场" + count[2] + "次");
-                        System.out.println("其中，3号角色出场" + count[3] + "次");
-                        System.out.println("其中，4号角色出场" + count[4] + "次");
 
+                        for (int n = 0; n < count.length; n++) {
+                            if (n < aTeam.length) {
+                                System.out.println("aTeam的" + n + "出场了" + count[n] + "次");
+                            } else {
+                                System.out.println("bTeam的" + (n-aTeam.length)+ "出场了" + count[n - aTeam.length] + "次");
+                            }
+                        }
                         return;
                     }
 

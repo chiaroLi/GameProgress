@@ -69,11 +69,9 @@ public class CalculateOneTime {
 
         System.out.println("各个角色出场顺序为===" + stringBuffer);
 
-        System.out.println("其中，0号角色出场" + count[0] + "次");
-        System.out.println("其中，1号角色出场" + count[1] + "次");
-        System.out.println("其中，2号角色出场" + count[2] + "次");
-        System.out.println("其中，3号角色出场" + count[3] + "次");
-        System.out.println("其中，4号角色出场" + count[4] + "次");
+        for (int i = 0 ; i<speed.length;i++){
+            System.out.println("其中，"+i+"号角色出场" + count[i] + "次");
+        }
 
     }
 

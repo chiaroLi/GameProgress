@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * V2.0 可控制出现，并控制是否结束
+ * V1.1
+ * 可控制出现，并控制是否结束
  * Created by chiaro on 2016/11/24.
  */
 public class KnockToNext {
@@ -86,18 +87,13 @@ public class KnockToNext {
                             System.out.print(turn.get(m));
                         }
                         System.out.println();
-                        System.out.println("其中，0号角色出场" + count[0] + "次");
-                        System.out.println("其中，1号角色出场" + count[1] + "次");
-                        System.out.println("其中，2号角色出场" + count[2] + "次");
-                        System.out.println("其中，3号角色出场" + count[3] + "次");
-                        System.out.println("其中，4号角色出场" + count[4] + "次");
+                        for (int n = 0 ; n<speed.length;n++){
+                            System.out.println("其中，"+n+"号角色出场" + count[n] + "次");
+                        }
 
                         return;
                     }
-
                 }
-
-
             }
 
         }
