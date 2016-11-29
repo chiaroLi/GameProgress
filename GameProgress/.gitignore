@@ -2,5 +2,4 @@
 local.properties
 .idea
 /build
-build.gradle
 GameProgress.iml
