@@ -36,7 +36,10 @@ public class TwoTeams {
 
         Scanner scanner = new Scanner(System.in);// 创建输入流扫描器
 
-        System.out.println("输入\"y\"并回车到下一位，输入其他内容结束");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("|输入\"y\"并回车到下一位----------------------|");
+        System.out.println("|输入其他内容并回车结束---------------------|");
+        System.out.println("|-------------------------------------------|");
         System.out.println("现在开始");
 
         // 先建一个数组，包含所有的角色
@@ -114,14 +117,9 @@ public class TwoTeams {
                         }
                         return;
                     }
-
                 }
-
-
             }
-
         }
-
 
     }
 }
